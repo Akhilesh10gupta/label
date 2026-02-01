@@ -7,6 +7,7 @@ import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import Navbar from "../components/Navbar";
+import Preloader from "../components/Preloader";
 
 const brandList = [
   {
@@ -55,6 +56,7 @@ const brandList = [
 
 export default function LabelsAndBrands() {
   const containerRef = useRef<HTMLDivElement>(null);
+  const [loading, setLoading] = useState(true);
 
   // Refs for ScrollTrigger sections
   const manifestRef = useRef<HTMLDivElement>(null);
@@ -66,6 +68,8 @@ export default function LabelsAndBrands() {
   const [activeCursor, setActiveCursor] = useState(false);
 
   useEffect(() => {
+    if (loading) return;
+
     gsap.registerPlugin(ScrollTrigger);
 
     const ctx = gsap.context(() => {
@@ -155,10 +159,21 @@ export default function LabelsAndBrands() {
     }, containerRef);
 
     return () => ctx.revert();
-  }, []);
+  }, [loading]);
 
   return (
     <>
+      {loading && (
+        <Preloader
+          onComplete={() => setLoading(false)}
+          topText={["LABELS"]}
+          bottomText={["& BRANDS"]}
+          topColor="#2563EB"       // Electric Blue Background
+          topTextColor="#000000"   // Black Text
+          bottomColor="#000000"    // Black Background
+          bottomTextColor="#2563EB" // Electric Blue Text
+        />
+      )}
       <Navbar />
       <div ref={containerRef} className="bg-void-black text-white selection:bg-neon-purple selection:text-white overflow-x-hidden">
 
@@ -179,7 +194,7 @@ export default function LabelsAndBrands() {
           </div>
           <div className="relative z-10 text-center px-6">
             <h1 className="text-[10vw] leading-[0.8] font-black font-heading tracking-tighter mix-blend-difference mb-8">
-              <span className="hero-char inline-block">THE</span> <span className="hero-char inline-block text-transparent stroke-text">ROSTER</span>
+              <span className="hero-char inline-block">LABELS</span> <span className="hero-char inline-block text-transparent stroke-text">& BRANDS</span>
             </h1>
             <p className="max-w-lg mx-auto text-neutral-400 text-lg hero-char">
               Navigating the frequency spectrum. Discover the sounds that define our universe.
@@ -211,7 +226,7 @@ export default function LabelsAndBrands() {
         <section ref={rosterRef} className="h-auto md:h-screen bg-neutral-900 overflow-hidden relative flex flex-col justify-center">
 
           <div className="md:hidden pt-24 pb-12 px-6">
-            <h2 className="text-4xl font-bold mb-8">All Labels</h2>
+            <h2 className="text-4xl font-bold mb-8">Labels & Brands</h2>
             <p className="text-neutral-500 text-sm mb-12">Scroll down to view</p>
           </div>
 
@@ -221,7 +236,7 @@ export default function LabelsAndBrands() {
             <div className="hidden md:flex h-screen w-screen items-center justify-center shrink-0 border-r border-white/5 bg-void-black z-10 relative">
               <div className="text-center">
                 <span className="block text-electric-blue text-sm font-bold tracking-[0.5em] mb-4">DRAG &gt;&gt;&gt;</span>
-                <h2 className="text-8xl font-black font-heading uppercase">The<br />Collection</h2>
+                <h2 className="text-8xl font-black font-heading uppercase">Labels<br />& Brands</h2>
               </div>
             </div>
 
