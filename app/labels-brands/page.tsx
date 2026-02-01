@@ -61,6 +61,10 @@ export default function LabelsAndBrands() {
   const rosterRef = useRef<HTMLDivElement>(null);
   const horizontalRef = useRef<HTMLDivElement>(null);
 
+  // Custom Cursor for "Open Label"
+  const cursorLabelRef = useRef<HTMLDivElement>(null);
+  const [activeCursor, setActiveCursor] = useState(false);
+
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -76,12 +80,11 @@ export default function LabelsAndBrands() {
       });
 
       // 2. Manifesto Section - Pinned Reveal
-      // Words fade in one by one as user scrolls
       const manifestoTl = gsap.timeline({
         scrollTrigger: {
           trigger: manifestRef.current,
           start: "top top",
-          end: "+=200%", // 200% viewport height duration
+          end: "+=200%",
           pin: true,
           scrub: 1,
         }
@@ -93,7 +96,7 @@ export default function LabelsAndBrands() {
         .fromTo(".manif-word-3", { opacity: 0.1, scale: 0.9 }, { opacity: 1, scale: 1, duration: 1 });
 
 
-      // 3. Horizontal Scroll Section - The Roster
+      // 3. Horizontal Scroll Section
       const mm = gsap.matchMedia();
 
       // Desktop: Horizontal Scroll
@@ -102,7 +105,6 @@ export default function LabelsAndBrands() {
         const scrollContainer = horizontalRef.current;
         if (!scrollContainer) return;
 
-        // Calculate the total scrollable width (total width - viewport width)
         const getScrollAmount = () => -(scrollContainer.scrollWidth - window.innerWidth);
 
         gsap.to(scrollContainer, {
@@ -131,12 +133,24 @@ export default function LabelsAndBrands() {
             ease: "power2.out",
             scrollTrigger: {
               trigger: card,
-              start: "top 80%", // Start animation when card top hits 80% viewport height
+              start: "top 80%",
               toggleActions: "play none none reverse"
             }
           });
         });
       });
+
+      // Mouse Follower
+      const xTo = gsap.quickTo(cursorLabelRef.current, "x", { duration: 0.4, ease: "power3" });
+      const yTo = gsap.quickTo(cursorLabelRef.current, "y", { duration: 0.4, ease: "power3" });
+
+      const handleMouseMove = (e: MouseEvent) => {
+        xTo(e.clientX);
+        yTo(e.clientY);
+      };
+
+      window.addEventListener("mousemove", handleMouseMove);
+      return () => window.removeEventListener("mousemove", handleMouseMove);
 
     }, containerRef);
 
@@ -147,6 +161,16 @@ export default function LabelsAndBrands() {
     <>
       <Navbar />
       <div ref={containerRef} className="bg-void-black text-white selection:bg-neon-purple selection:text-white overflow-x-hidden">
+
+        {/* Global Custom Cursor Element (Fixed) */}
+        <div
+          ref={cursorLabelRef}
+          className={`fixed top-0 left-0 pointer-events-none z-50 flex items-center justify-center -translate-x-1/2 -translate-y-1/2 transition-opacity duration-300 mix-blend-difference ${activeCursor ? "opacity-100 scale-100" : "opacity-0 scale-50"}`}
+        >
+          <span className="text-white font-bold tracking-widest uppercase border border-white bg-black px-6 py-2 rounded-full whitespace-nowrap">
+            Open Label
+          </span>
+        </div>
 
         {/* 1. Hero Section */}
         <section className="h-screen flex items-center justify-center relative overflow-hidden">
@@ -192,10 +216,8 @@ export default function LabelsAndBrands() {
           </div>
 
           {/* Horizontal Container (Flex Row) */}
-          {/* Using w-max to let content define width instead of hardcoded percentage */}
           <div ref={horizontalRef} className="flex flex-col md:flex-row md:items-center h-full w-full md:w-max px-6 md:px-0">
 
-            {/* Intro Card for Horizontal Scroll (Desktop) */}
             <div className="hidden md:flex h-screen w-screen items-center justify-center shrink-0 border-r border-white/5 bg-void-black z-10 relative">
               <div className="text-center">
                 <span className="block text-electric-blue text-sm font-bold tracking-[0.5em] mb-4">DRAG &gt;&gt;&gt;</span>
@@ -210,7 +232,11 @@ export default function LabelsAndBrands() {
                 <div className="relative w-full max-w-5xl h-full flex flex-col md:flex-row gap-12 items-center justify-center">
 
                   {/* Interactive Image Region */}
-                  <div className="relative w-full md:w-1/2 aspect-square md:aspect-[4/5] group cursor-none overflow-hidden rounded-2xl">
+                  <div
+                    className="relative w-full md:w-1/2 aspect-square md:aspect-[4/5] group cursor-none overflow-hidden rounded-2xl"
+                    onMouseEnter={() => setActiveCursor(true)}
+                    onMouseLeave={() => setActiveCursor(false)}
+                  >
                     <Image
                       src={brand.image}
                       alt={brand.name}
@@ -218,11 +244,6 @@ export default function LabelsAndBrands() {
                       className="object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
                     />
                     <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors" />
-
-                    {/* Custom Cursor Text (Visual Only) */}
-                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none mix-blend-difference">
-                      <span className="text-white font-bold tracking-widest uppercase border border-white px-6 py-2 rounded-full">Open Label</span>
-                    </div>
                   </div>
 
                   {/* Text Content */}
@@ -241,7 +262,6 @@ export default function LabelsAndBrands() {
                   </div>
                 </div>
 
-                {/* Background Number */}
                 <div className="absolute bottom-0 right-0 text-[20vw] font-black text-white/5 leading-none select-none pointer-events-none">
                   {brand.id}
                 </div>
