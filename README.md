@@ -20,17 +20,20 @@ A premium, modern record label website built with Next.js, featuring stunning an
 - **Framer Motion** for smooth page transitions and micro-interactions
 - **Staggered Entry Animations** for content reveals
 - **Custom Preloader** with animated logo
+- **404 Glitch Effect** for a thematic error experience
 
 ### 🎯 Key Pages
 - **Home**: Hero slider, manifesto section, latest updates, featured artists
 - **Artists**: Parallax header, visual mosaic, searchable roster grid
 - **Releases**: Album showcase with GSAP stagger animations
-- **News**: Masonry grid layout with category filtering
+- **News**: Masonry grid layout with category filtering and mobile-optimized featured articles
 - **About**: Mission section with advanced scroll animations, timeline, team showcase
+- **Contact**: Interactive form with GSAP focus animations and validation
+- **404 / Under Construction**: Creative "Signal Lost" page with interactive mouse follower
 
 ### 🔍 Interactive Features
 - **Global Search**: Slide-down search panel with real-time filtering
-- **Mobile Menu**: Animated hamburger menu with smooth transitions
+- **Mobile Menu**: Animated hamburger menu with full-screen overlay
 - **Artist Cards**: Hover effects and gradient overlays
 - **Responsive Navigation**: Adaptive navbar with scroll effects
 
@@ -105,9 +108,11 @@ album/
 │   ├── releases/         # Releases page
 │   ├── news/             # News page
 │   ├── about/            # About page
+│   ├── contact/          # Contact page
 │   ├── globals.css       # Global styles & theme
 │   ├── layout.tsx        # Root layout
-│   └── page.tsx          # Home page
+│   ├── page.tsx          # Home page
+│   └── not-found.tsx     # 404 / Under Construction page
 ├── public/
 │   └── images/           # Static images
 ├── tailwind.config.ts    # Tailwind configuration
