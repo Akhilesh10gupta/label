@@ -57,6 +57,7 @@ export default function Footer() {
                             <FooterLink href="/artists" label="Artists" />
                             <FooterLink href="/releases" label="Releases" />
                             <FooterLink href="/events" label="Events" />
+                            <FooterLink href="/labels-brands" label="Labels & Brands" />
                             <FooterLink href="/news" label="Journal" />
                         </ul>
                     </div>
