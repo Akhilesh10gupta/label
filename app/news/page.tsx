@@ -151,7 +151,7 @@ export default function NewsPage() {
                                     animate={{ opacity: 1, y: 0 }}
                                     exit={{ opacity: 0, y: -20 }}
                                     transition={{ duration: 0.5 }}
-                                    className="group relative w-full aspect-video md:aspect-[21/9] overflow-hidden bg-neutral-900"
+                                    className="group relative w-full h-[60vh] md:h-auto md:aspect-[21/9] overflow-hidden bg-neutral-900"
                                 >
                                     <Image
                                         src={featuredNews.image}
