@@ -96,12 +96,12 @@ export default function Contact() {
             {loading && (
                 <Preloader
                     onComplete={() => setLoading(false)}
-                    topColor="#2563EB"
-                    bottomColor="#050505"
+                    topColor="#2563EB"       // Electric Blue Background
+                    topTextColor="#000000"   // Black Text
+                    bottomColor="#050505"    // Black Background (keeping 050505 to match void-black or 000000 for pure black contrast)
+                    bottomTextColor="#2563EB" // Electric Blue Text
                     topText={["GET IN", "TOUCH"]}
                     bottomText={["WITH US"]}
-                    topTextColor="#ffffff"
-                    bottomTextColor="#ffffff"
                 />
             )}
             <Navbar />
