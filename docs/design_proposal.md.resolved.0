@@ -1,0 +1,58 @@
+# Record Label Website Design Proposal
+
+Based on the analysis of industry giants (Universal Music, Sony Music, Warner Music), here is a comprehensive design specificiation for your new record label website.
+
+## 1. Visual Identity & Color Theme
+The major labels all share a common design language: **Premium, Clean, and Artist-Centric**. They avoid clutter and use high-contrast content to make the artists pop.
+
+### Recommended Color Palette
+We should aim for a "Dark Mode Premium" or "Clean Corporate" look.
+- **Primary Background**: `Running White (#FFFFFF)` OR `Deep Matte Black (#121212)`
+    - *Note: 3 out of 4 reference sites use white backgrounds for a corporate feel, but dark mode is often preferred for a more "creative/edgy" vibe.*
+- **Primary Text**: `Carbon Black (#1A1A1A)` (on white) or `Off-White (#E5E5E5)` (on black).
+- **Accent Color**: Choose **ONE** bold color to represent your specific brand identity.
+    - *Universal*: Deep Red / Gold
+    - *Sony*: Bright Red
+    - *Warner*: Electric Blue
+    - **Recommendation for you**: A **Vibrant Teal (#00D4FF)** or **Electric Purple (#BF00FF)** if you want to feel modern and digital-first. If you want traditional prestige, go with **Gold (#D4AF37)**.
+
+## 2. Core Layout Structure
+The structure should be predictable but visually engaging.
+
+### Header (Navigation)
+- **Layout**: Logo on the far **Left**. Navigation links clean and minimal on the **Right** (Desktop) or **Hamburger Menu** (Mobile).
+- **Key Links**:
+    1.  **Artists** (The most important link)
+    2.  **Releases / Music**
+    3.  **News / Stories**
+    4.  **About Us**
+    5.  **Search Icon** (Essential for finding specific artists)
+
+### Hero Section (The "Wow" Factor)
+This is the most critical part of the landing page.
+- **Content**: A full-screen width **Automatic Slider** or **Video Background**.
+- **What to show**: High-resolution photography of your top 3 featured artists or latest major album releases.
+- **Overlay**: Minimal text (Artist Name, Album Title) + "Listen Now" button.
+
+### Content Feature: "The Grid"
+For displaying News, New Releases, or Artists.
+- Use a **Masonry Grid** or **3-Column Card Layout**.
+- **Cards**: High-quality image on top, small bold text below. No borders, just clean spacing.
+- **Hover Effects**: Slight zoom on images or a color overlay when hovering to add interactivity.
+
+### Footer
+- **Socials**: Prominent icons for Instagram, YouTube, Twitter/X, Spotify.
+- **Newsletter**: "Subscribe to our newsletter" input field (very important for labels).
+- **Legal**: Privacy Policy, Terms of Service.
+
+## 3. Essential Features to Build
+1.  **Dynamic Artist Roster**: A filterable page (A-Z, Genre) showing all your signed artists.
+2.  **Music Player / Smart Links**: When clicking a release, offer a "Choose your service" modal (Spotify, Apple Music, YouTube) rather than playing audio directly on the site (controls bandwidth and drives streams where they count).
+3.  **News / Blog Section**: To announce signings, tour dates, and press releases.
+4.  **Contact / Demo Submission**: A dedicated form for aspiring artists to send demos (if you are accepting them).
+
+## 4. Proposed Tech Stack
+To achieve this high-performance, premium look:
+- **Framework**: **Next.js** (React) - For speed, SEO, and smooth page transitions.
+- **Styling**: **Tailwind CSS** - For rapid, custom design without fighting default styles.
+- **Animation**: **Framer Motion** - To add those subtle "premium" reveal animations when scrolling.

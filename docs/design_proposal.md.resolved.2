@@ -1,0 +1,58 @@
+# Record Label Website Design Proposal
+
+I have analyzed the current live versions of Universal Music Group, Sony Music, and Warner Music (Global & India) to create this tailored design specification.
+
+## 1. Verified Visual Trends (2024-2025)
+From my live analysis of the source code, here are the dominant trends:
+
+*   **The "Dark Mode" Standard**: Warner Music India explicitly uses a `theme-color="#000000"` (Pure Black) with white text. This creates a cinematic, "VIP" feel.
+*   **Search is King**: Warner Music Group places a *Search* bar prominently on their Artists page, acknowledging that fans want fast access to specific talent.
+*   **Corporate vs. Cultural**:
+    *   *Universal Music* uses a clean grid for their labels.
+    *   *Warner Music* focuses on "Dreams into Stardom" – a more emotional, artist-first approach.
+
+## 2. Design Recommendation: "The Modern Powerhouse"
+I recommend a hybrid approach: **Dark Mode (Premium)** + **Warner's Emotional Storytelling** + **Universal's Clean Grid**.
+
+### Color Palette
+-   **Background**: `Void Black (#050505)` - Slightly softer than pure black for depth.
+-   **Text**: `White (#FFFFFF)` for headings, `Silver (#A1A1AA)` for body text.
+-   **Accent**: **Electric Blue (#2563EB)** or **Neon Purple (#7C3AED)** (Inspired by WMG's modern tech focus).
+
+### Core Layout Structure
+
+#### A. Header (Navigation)
+Based on Universal & Warner's live menus, your nav should be:
+1.  **Artists** (Priority #1)
+2.  **Music / Releases**
+3.  **News** (Critical for industry updates)
+4.  **Careers / People** (Warner features this heavily)
+5.  **About Us**
+
+#### B. Hero Section (The Hook)
+*Reference: Warner Music India*
+*   **Visual**: Auto-playing full-screen video loop of your top artist's music video (muted by default).
+*   **Overlay**: Big, bold typeface.
+*   **Tagline Suggestion**: "Shaping the Future of Music" (Generic) or "Your Voice, Amplified" (Artist-centric).
+
+#### C. The "Artist Roster" Section
+*Reference: Warner Music Group*
+*   **Search Bar**: Place a large, elegant search bar at the top of the Artists page.
+*   **Grid**: 3 artists per row on Desktop, 1 on Mobile.
+*   **Hover Effect**: Image goes from Black & White -> Full Color on hover.
+
+#### D. Essential Features (Technical)
+1.  **"Featured News" Carousel**: Like Universal's homepage, showing latest signings or press releases.
+2.  **Smart Links Modal**: Clicking "Listen" opens a modal with Spotify/Apple/YouTube links.
+3.  **Newsletter Signup**: "Join our community" - Essential for fan data collection.
+
+## 3. Implementation Plan
+We will build this using:
+-   **Framework**: Next.js 14 (App Router)
+-   **Styling**: Tailwind CSS (for that bespoke Dark Mode)
+-   **Icons**: Lucide React (Clean, sharp industry-standard icons)
+
+### Immediate Next Steps
+1.  Initialize Next.js Project.
+2.  Setup Tailwind Config with the "Void Black" theme.
+3.  Build the `Navbar` and `Hero` components.
