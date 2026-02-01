@@ -106,7 +106,15 @@ export default function ArtistsPage() {
 
     return (
         <main ref={containerRef} className="min-h-screen bg-void-black text-white selection:bg-electric-blue selection:text-white overflow-hidden">
-            {loading && <Preloader onComplete={() => setLoading(false)} />}
+            {loading && (
+                <Preloader
+                    onComplete={() => setLoading(false)}
+                    topColor="#ff00cc"       // Pink Background
+                    topTextColor="#000000"   // Black Text
+                    bottomColor="#000000"    // Black Background
+                    bottomTextColor="#ff00cc" // Pink Text
+                />
+            )}
             <Navbar />
 
             {/* SECTION 1: HEADER WITH PARALLAX & MOSAIC */}
