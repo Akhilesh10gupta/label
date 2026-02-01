@@ -1,36 +1,172 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎵 Antigravity Records
 
-## Getting Started
+A premium, modern record label website built with Next.js, featuring stunning animations, responsive design, and a sophisticated user experience inspired by industry leaders like Universal Music Group, Sony Music, and Warner Music Group.
 
-First, run the development server:
+![Next.js](https://img.shields.io/badge/Next.js-15-black?style=flat-square&logo=next.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=flat-square&logo=typescript)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-4-38bdf8?style=flat-square&logo=tailwindcss)
+![GSAP](https://img.shields.io/badge/GSAP-3-88CE02?style=flat-square&logo=greensock)
+
+## ✨ Features
+
+### 🎨 Premium Design
+- **Dark, Cyber-Aesthetic Theme** with custom color palette (Void Black, Electric Blue, Neon Purple)
+- **Parallax Effects** and scroll-triggered animations throughout
+- **Glassmorphism** and backdrop blur effects for modern UI
+- **Responsive Design** optimized for all devices (mobile, tablet, desktop)
+
+### 🎬 Advanced Animations
+- **GSAP ScrollTrigger** for pinned sections and scrub animations
+- **Framer Motion** for smooth page transitions and micro-interactions
+- **Staggered Entry Animations** for content reveals
+- **Custom Preloader** with animated logo
+
+### 🎯 Key Pages
+- **Home**: Hero slider, manifesto section, latest updates, featured artists
+- **Artists**: Parallax header, visual mosaic, searchable roster grid
+- **Releases**: Album showcase with GSAP stagger animations
+- **News**: Masonry grid layout with category filtering
+- **About**: Mission section with advanced scroll animations, timeline, team showcase
+
+### 🔍 Interactive Features
+- **Global Search**: Slide-down search panel with real-time filtering
+- **Mobile Menu**: Animated hamburger menu with smooth transitions
+- **Artist Cards**: Hover effects and gradient overlays
+- **Responsive Navigation**: Adaptive navbar with scroll effects
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS 4](https://tailwindcss.com/)
+- **Animations**: 
+  - [GSAP](https://greensock.com/gsap/) with ScrollTrigger plugin
+  - [Framer Motion](https://www.framer.com/motion/)
+- **Fonts**: 
+  - [Outfit](https://fonts.google.com/specimen/Outfit) (Headings)
+  - [Inter](https://fonts.google.com/specimen/Inter) (Body)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Image Optimization**: Next.js Image component
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js 18+ 
+- npm, yarn, pnpm, or bun
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Akhilesh10gupta/label.git
+   cd label
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   # or
+   yarn install
+   # or
+   pnpm install
+   ```
+
+3. **Run the development server**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   # or
+   pnpm dev
+   ```
+
+4. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
+
+### Build for Production
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run build
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📁 Project Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+album/
+├── app/
+│   ├── components/        # Reusable React components
+│   │   ├── Navbar.tsx    # Navigation with search
+│   │   ├── Hero.tsx      # Hero slider
+│   │   ├── ArtistCard.tsx
+│   │   ├── Preloader.tsx
+│   │   └── Footer.tsx
+│   ├── artists/          # Artists page
+│   ├── releases/         # Releases page
+│   ├── news/             # News page
+│   ├── about/            # About page
+│   ├── globals.css       # Global styles & theme
+│   ├── layout.tsx        # Root layout
+│   └── page.tsx          # Home page
+├── public/
+│   └── images/           # Static images
+├── tailwind.config.ts    # Tailwind configuration
+└── next.config.ts        # Next.js configuration
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🎨 Design System
 
-## Learn More
+### Color Palette
+- **Void Black**: `#050505` - Primary background
+- **Electric Blue**: `#2563EB` - Primary accent
+- **Neon Purple**: `#7C3AED` - Secondary accent
+- **Silver**: `#A1A1AA` - Text/borders
 
-To learn more about Next.js, take a look at the following resources:
+### Typography
+- **Headings**: Outfit (Black, Bold weights)
+- **Body**: Inter (Regular, Medium weights)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Key Design Patterns
+- **Stroke Text**: Outlined typography for emphasis
+- **Parallax Watermarks**: Large background text with scroll effects
+- **Gradient Overlays**: Smooth transitions on images
+- **Backdrop Blur**: Frosted glass effects
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🌟 Key Features Breakdown
 
-## Deploy on Vercel
+### Search Functionality
+- Real-time search across artists, releases, and news
+- Slide-down panel with smooth animations
+- "No results" feedback with helpful suggestions
+- Mobile-optimized interface
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Mobile Experience
+- Dedicated mobile menu with full-screen overlay
+- Touch-optimized interactions
+- Responsive typography scaling
+- Optimized image loading
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Performance
+- Next.js Image optimization
+- Code splitting and lazy loading
+- Optimized animations with GSAP
+- Minimal bundle size
+
+## 📝 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 👤 Author
+
+**Akhilesh Gupta**
+- GitHub: [@Akhilesh10gupta](https://github.com/Akhilesh10gupta)
+
+## 🙏 Acknowledgments
+
+- Design inspiration from Universal Music Group, Sony Music, and Warner Music Group
+- Built with modern web technologies and best practices
+- Special thanks to the Next.js and GSAP communities
+
+---
+
+**Made with ❤️ and ☕ by Akhilesh Gupta**
