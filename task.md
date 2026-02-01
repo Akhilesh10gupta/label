@@ -21,4 +21,7 @@
 - [x] Build About Page (Mission Section Animation Pending) <!-- id: 21 -->
 - [x] Optimize Mobile Responsiveness (Artists Page) <!-- id: 22 -->
 - [x] Global Theme Integration (Selection Color) <!-- id: 23 -->
+- [x] Build Contact Page (with GSAP & Form) <!-- id: 24 -->
+- [x] Implement Loading Screen (app/contact/loading.tsx) <!-- id: 25 -->
+- [x] Add Contact Link to Footer <!-- id: 26 -->
 - [ ] Final Review & Polish <!-- id: 13 -->
