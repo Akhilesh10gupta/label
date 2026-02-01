@@ -25,4 +25,5 @@
 - [x] Implement Loading Screen (app/contact/loading.tsx) <!-- id: 25 -->
 - [x] Add Contact Link to Footer <!-- id: 26 -->
 - [x] Redesign Footer (Premium "Void" Aesthetics) <!-- id: 27 -->
+- [x] Implement Premium 404/Under Development Page (GSAP) <!-- id: 28 -->
 - [ ] Final Review & Polish <!-- id: 13 -->
