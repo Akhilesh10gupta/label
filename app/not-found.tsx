@@ -155,7 +155,7 @@ export default function NotFound() {
             {/* Bottom Tech Details */}
             <div className="absolute bottom-12 left-0 w-full text-center">
                 <p className="text-[10px] uppercase tracking-[0.3em] text-neutral-600 font-mono">
-                    Error Code: NULL_REFERENCE // System: ANTIGRAVITY
+                    Error Code: NULL_REFERENCE // System: MUSIC_LABEL
                 </p>
             </div>
         </main>

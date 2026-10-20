@@ -24,7 +24,7 @@ export default function Footer() {
                     <div className="lg:col-span-5 flex flex-col items-start pr-12">
                         <Link href="/" className="mb-6 block">
                             <span className="text-3xl md:text-4xl font-black font-heading tracking-tighter text-white">
-                                ANTIGRAVITY<span className="text-electric-blue">.</span>
+                                MUSIC LABEL<span className="text-electric-blue">.</span>
                             </span>
                         </Link>
                         <p className="text-lg leading-relaxed mb-8 max-w-sm text-neutral-500">
@@ -86,7 +86,7 @@ export default function Footer() {
 
                     {/* Copyright */}
                     <p className="text-xs text-neutral-600 font-medium tracking-wide">
-                        © 2026 ANTIGRAVITY RECORDS. ALL RIGHTS RESERVED.
+                        © 2026 MUSIC LABEL. ALL RIGHTS RESERVED.
                     </p>
 
                     {/* Legal Links */}

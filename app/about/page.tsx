@@ -20,7 +20,7 @@ const TEAM = [
 ];
 
 const HISTORY = [
-    { year: "2020", title: "Inception", description: "Antigravity Records founded in a basement in Berlin." },
+    { year: "2020", title: "Inception", description: "Music Label founded in a basement in Berlin." },
     { year: "2022", title: "Global Reach", description: "Signed Neon Genesis, breaking 100M streams worldwide." },
     { year: "2024", title: "The New Era", description: "Launched the 'Void' protocol, redefining immersive audio." },
     { year: "2025", title: "Expansion", description: "Opened state-of-the-art studios in Tokyo and LA." },
@@ -158,7 +158,7 @@ export default function AboutPage() {
                         topTextColor="#000000"
                         bottomTextColor="#A1A1AA"
                         topText={["OUR", "STORY"]}
-                        bottomText={["ANTIGRAVITY"]}
+                        bottomText={["MUSIC LABEL"]}
                     />
                 )}
             </AnimatePresence>

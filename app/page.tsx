@@ -19,7 +19,7 @@ if (typeof window !== "undefined") {
 const FEATURED_NEWS = [
   { title: "Universal Music Group N.V. to Announce Financial Results", category: "Corporate", date: "OCT 24", slug: "finance-results" },
   { title: "NEON MIST Breaks Global Streaming Records with 'Void'", category: "Press", date: "OCT 22", slug: "neon-mist-record" },
-  { title: "Antigravity Signs Viral Sensation 'Cyber Saint'", category: "Signings", date: "OCT 20", slug: "cyber-saint-signing" },
+  { title: "Music Label Signs Viral Sensation 'Cyber Saint'", category: "Signings", date: "OCT 20", slug: "cyber-saint-signing" },
   { title: "World Tour Announced: The Velvet Echo Experience", category: "Tour", date: "OCT 18", slug: "velvet-echo-tour" },
   { title: "New AI Production Tools Available for Artists", category: "Tech", date: "OCT 15", slug: "tech-tools" },
   { title: "Charity Concert Raises $5M for Music Education", category: "Impact", date: "OCT 10", slug: "charity-concert" },
@@ -199,7 +199,7 @@ export default function Home() {
 
               <div className="flex flex-col items-end gap-4 mt-8 md:mt-0">
                 <p className="text-neutral-400 max-w-sm text-right hidden md:block leading-relaxed">
-                  Antigravity is home to many of the world's visionary artists — from emerging local talent to global superstars.
+                  Music Label is home to many of the world's visionary artists — from emerging local talent to global superstars.
                 </p>
                 <Link href="/artists" className="flex items-center gap-2 border border-white/20 px-6 py-3 rounded-full hover:bg-white hover:text-black transition-all duration-300 uppercase tracking-widest text-xs font-bold group">
                   View Full Roster <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />

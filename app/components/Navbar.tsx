@@ -40,7 +40,7 @@ export default function Navbar() {
             { name: "Velvet Echo - Live", slug: "velvet-echo-live", type: "Release" },
         ],
         news: [
-            { name: "Antigravity Signs Neon Genesis", slug: "sign-neon-genesis", type: "News" },
+            { name: "Music Label Signs Neon Genesis", slug: "sign-neon-genesis", type: "News" },
             { name: "Void Tour 2026 Announced", slug: "void-tour-2026", type: "News" },
         ]
     };
@@ -62,7 +62,7 @@ export default function Navbar() {
             <div className="container mx-auto px-6 flex justify-between items-center relative z-20">
                 {/* Logo */}
                 <Link href="/" className="text-2xl font-heading font-bold tracking-tighter text-white">
-                    ANTIGRAVITY<span className="text-electric-blue">.</span>
+                    MUSIC LABEL<span className="text-electric-blue">.</span>
                 </Link>
 
                 {/* Desktop Menu */}

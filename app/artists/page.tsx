@@ -140,7 +140,7 @@ export default function ArtistsPage() {
 
                     <div className="header-desc flex flex-col items-start md:items-end gap-6 mt-8 md:mt-0 max-w-md text-left md:text-right">
                         <p className="text-neutral-400 leading-relaxed text-base md:text-lg">
-                            Antigravity is home to many of the world's visionary artists — from emerging local talent to global superstars.
+                            Music Label is home to many of the world's visionary artists — from emerging local talent to global superstars.
                         </p>
                         <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-silver">
                             Scout New Talent <ArrowRight size={14} />

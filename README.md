@@ -1,4 +1,4 @@
-# 🎵 Antigravity Records
+# 🎵 Music Label
 
 A premium, modern record label website built with Next.js, featuring stunning animations, responsive design, and a sophisticated user experience inspired by industry leaders like Universal Music Group, Sony Music, and Warner Music Group.
 

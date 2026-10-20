@@ -11,7 +11,7 @@ import Image from "next/image";
 // Extended Data with Images
 const NEWS_ITEMS = [
     {
-        title: "NEON GENESIS Signs Global Publishing Deal with Antigravity",
+        title: "NEON GENESIS Signs Global Publishing Deal with Music Label",
         category: "Signings",
         date: "OCT 24, 2025",
         slug: "neon-genesis-signing",
@@ -23,7 +23,7 @@ const NEWS_ITEMS = [
         category: "Corporate",
         date: "OCT 20, 2025",
         slug: "financial-results-q3",
-        summary: "Antigravity reports a 40% increase in digital revenue across all platforms.",
+        summary: "Music Label reports a 40% increase in digital revenue across all platforms.",
         image: "/images/hero-studio-gear.png" // Placeholder: Generic Studio
     },
     {
@@ -35,7 +35,7 @@ const NEWS_ITEMS = [
         image: "/images/hero-concert.png" // Placeholder: Concert
     },
     {
-        title: "Antigravity Launches New AI-Powered Production Suite",
+        title: "Music Label Launches New AI-Powered Production Suite",
         category: "Tech",
         date: "OCT 10, 2025",
         slug: "tech-launch",

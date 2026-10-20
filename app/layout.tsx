@@ -16,7 +16,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Record Label",
+  title: "Music Label",
   description: "The sound of the future.",
 };
 

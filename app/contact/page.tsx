@@ -147,14 +147,14 @@ export default function Contact() {
                                     <ContactItem
                                         icon={<Mail size={24} />}
                                         label="General Inquiries"
-                                        value="hello@antigravity.rec"
-                                        href="mailto:hello@antigravity.rec"
+                                        value="hello@musiclabel.rec"
+                                        href="mailto:hello@musiclabel.rec"
                                     />
                                     <ContactItem
                                         icon={<Mail size={24} />}
                                         label="Demo Submissions"
-                                        value="demos@antigravity.rec"
-                                        href="mailto:demos@antigravity.rec"
+                                        value="demos@musiclabel.rec"
+                                        href="mailto:demos@musiclabel.rec"
                                     />
                                     <ContactItem
                                         icon={<Phone size={24} />}
